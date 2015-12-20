@@ -74,6 +74,8 @@ max_interval
 
 ## Imputing missing values
 
+Strategy: Missing values were imputed by inserting the average for each interval.
+
 
 ```r
 incomplete <- sum(!complete.cases(data))
