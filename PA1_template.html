@@ -92,7 +92,7 @@ max_interval</code></pre>
 </div>
 <div id="imputing-missing-values" class="section level2">
 <h2>Imputing missing values</h2>
-<p>Strategy: Missing values were imputed by inserting the average for each interval.</p>
+<p>Strategy: Missing values were imputed by inserting the average for each interval</p>
 <pre class="r"><code>incomplete &lt;- sum(!complete.cases(data))
 imputed_data &lt;- transform(data, steps = ifelse(is.na(data$steps), steps_by_interval$steps[match(data$interval, steps_by_interval$interval)], data$steps))
 
